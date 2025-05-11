@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QLAMIOS Config</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .toggle-box {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .toggle-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .toggle-desc {
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+      float: right;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #555;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #b84dff;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .note-box {
+      font-size: 12px;
+      color: #aaa;
+      background-color: #1a1a1a;
+      border-left: 3px solid #b84dff;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      background-color: #b84dff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2e2e2e;
+      border: 1px solid #b84dff;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toggle-box">
+    <span class="toggle-title">Trick Community</span>
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider"></span>
+    </label>
+    <div class="toggle-desc">Hỗ trợ kéo tâm giúp nâng tầm kỹ năng!</div>
+  </div>
+
+  <div class="toggle-box">
+    <span class="toggle-title">Trigger Infinity Lock</span>
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider"></span>
+    </label>
+    <div class="toggle-desc">Cải thiện cách bắn hiệu quả khi kéo tâm</div>
+  </div>
+
+  <div class="toggle-box">
+    <span class="toggle-title">HeadLock Sensitivity</span>
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider"></span>
+    </label>
+    <div class="toggle-desc">Tăng tốc độ và độ nhạy màn hình.</div>
+  </div>
+
+  <div class="note-box">
+    Bản quyền Menu × Config<br>
+    Đây là sản phẩm chế tạo hợp tác giữa NTC × LVT × NKT<br>
+    <b style="color: orange">⇒ nghiêm cấm in cắp chất xám dưới mọi hình thức!</b>
+  </div>
+
+  <button class="btn" onclick="showPopup()">Bật Chức Năng</button>
+
+  <div id="popup" class="popup">
+    HeadLock Sensitivity<br>Kích hoạt thành công cấu hình ✅
+  </div>
+
+  <script>
+    function showPopup() {
+      var pop = document.getElementById("popup");
+      pop.style.display = "block";
+      setTimeout(() => { pop.style.display = "none"; }, 3000);
+    }
+  </script>
+
+</body>
+</html>nput type="checkbox" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="option">
+    <div class="option-info">
+      <div class="option-title">DPI SPECIAL ( ADMIN )</div>
+      <div class="option-desc">Tính Năng Này Chưa Có Sẵn Cho Người Dùng</div>
+    </div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="option">
+    <div class="option-info">
+      <div class="option-title">Fix Reduce</div>
+      <div class="option-desc">Giảm Rung Tâm, Lỗ Đầu 1000%!</div>
+    </div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <script>
+    const passScreen = document.getElementById("password-screen");
+    const input = document.getElementById("password-input");
+    const btn = document.getElementById("submit-btn");
+
+    btn.addEventListener("click", () => {
+      if (input.value === "qlamios18") {
+        passScreen.style.display = "none";
+      } else {
+        alert("Sai mật khẩu!");
+      }
+    });
+  </script>
+</body>
+</html>
